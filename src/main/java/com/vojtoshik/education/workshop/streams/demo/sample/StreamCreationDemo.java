@@ -47,7 +47,4 @@ public class StreamCreationDemo {
         Path pathToFile = Paths.get("/etc/passwd");
         return Files.lines(pathToFile);
     }
-
-
-
 }
