@@ -3,6 +3,9 @@ package com.vojtoshik.education.workshop.streams.exercise.model;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
+import java.util.Collections;
+import java.util.List;
+
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class Person {
 
@@ -30,8 +33,11 @@ public class Person {
     @JsonProperty("job_title")
     private String jobTitle;
 
-    @JsonProperty("income_in_usd")
+    @JsonProperty("annual_income_in_eur")
     private Integer income;
+
+    @JsonProperty
+    private List<String> languages = Collections.emptyList();
 
     public Integer getId() {
         return id;

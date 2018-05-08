@@ -10,6 +10,6 @@ class _001_NumberOfRecordsTest extends AbstractExerciseTest {
 
     @Test
     public void testWorksAsExpected() {
-        assertEquals(Long.valueOf(1000), sut.solve(data));
+        assertEquals(Long.valueOf(500), sut.solve(data));
     }
 }
