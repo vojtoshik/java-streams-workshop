@@ -11,6 +11,8 @@ public class _001_NumberOfRecords implements Exercise<Long> {
 
     @Override
     public Long solve(List<Person> data) {
-        return -1L;
+        return data
+                .stream()
+                .count();
     }
 }

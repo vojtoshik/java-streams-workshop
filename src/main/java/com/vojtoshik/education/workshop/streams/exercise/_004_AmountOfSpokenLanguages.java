@@ -11,6 +11,9 @@ public class _004_AmountOfSpokenLanguages implements Exercise<Long> {
 
     @Override
     public Long solve(List<Person> data) {
-        return 0L;
+        return data.stream()
+                .flatMap(person -> person.getLanguages().stream())
+                .distinct()
+                .count();
     }
 }

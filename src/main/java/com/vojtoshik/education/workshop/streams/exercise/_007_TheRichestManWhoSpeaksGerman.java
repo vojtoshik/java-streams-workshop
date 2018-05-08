@@ -11,7 +11,9 @@ public class _007_TheRichestManWhoSpeaksGerman implements Exercise<Person> {
 
     @Override
     public Person solve(List<Person> data) {
-
-        return new Person();
+        return data.stream()
+                .filter(person -> person.getLanguages().contains("German"))
+                .reduce(((person1, person2) -> person1.getIncome() > person2.getIncome() ? person1 : person2))
+                .orElseThrow(() -> new RuntimeException("Does not exist"));
     }
 }
