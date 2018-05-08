@@ -74,4 +74,8 @@ public class Person {
     public Integer getIncome() {
         return income;
     }
+
+    public List<String> getLanguages() {
+        return Collections.unmodifiableList(languages);
+    }
 }
